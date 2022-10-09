@@ -1,0 +1,30 @@
+.best-templates {
+  padding-bottom: 80px;
+  .best-templates__right {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .best-templates__title {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 123.5%;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+
+  .best-templates__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 194%;
+    text-align: right;
+    color: rgba($white, .7);
+    margin-bottom: 20px;
+  }
+
+  .best-templates__btn {
+    width: fit-content;
+  }
+}

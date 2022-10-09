@@ -137,7 +137,6 @@ table {
 ul,
 ol {
   list-style: none;
-  
 }
 
 a {
@@ -157,4 +156,5 @@ body {
   font-weight: 400;
   font-size: $font;
   line-height: 34px;
+  overflow-x: hidden;
 }

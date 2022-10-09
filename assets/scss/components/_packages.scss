@@ -1,0 +1,46 @@
+.packages {
+    padding: 36px 0;
+    position: relative;
+    margin-bottom: 148px;
+
+    .packages__header {
+        text-align: center;
+        margin-bottom: 54px;
+        position: relative;
+    
+        .packages__header__ellipse {
+          position: absolute;
+          width: 451px;
+          height: 451px;
+          right: calc(50% - 225px);
+          top: 0;
+          background: rgba($success, 0.1);
+          filter: blur(112.5px);
+        }
+      }
+    
+      .packages__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 37px;
+        color: $success;
+      }
+    
+      .packages__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        opacity: 0.7;
+      }
+
+      .packages__ellipse {
+        position: absolute;
+        right: calc(50% - 225px);
+        bottom: -160px;
+        width: 451px;
+        height: 451px;
+        background: rgba($success, 0.1);
+        filter: blur(112px);
+        z-index: -1;
+      }
+}

@@ -1,0 +1,330 @@
+.dsm-card {
+  padding: 21px 16px 16px 58px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(25px);
+  border-radius: $border-radius-md;
+  &.dsm-card--large {
+    padding: 37px 27px 37px 65px;
+  }
+  .dsm-card__images {
+    display: flex;
+    margin-bottom: 8px;
+
+    img {
+      width: 44px;
+      height: 44px;
+      border-radius: 100%;
+      border: 3px solid #000;
+      position: relative;
+
+      &:nth-of-type(1) {
+        z-index: 3;
+      }
+
+      &:nth-of-type(2) {
+        z-index: 2;
+        right: -22px;
+      }
+
+      &:nth-of-type(3) {
+        z-index: 1;
+        right: -44px;
+      }
+    }
+  }
+
+  .dsm-card__title {
+    font-weight: 800;
+    font-size: 74px;
+    line-height: 0.8;
+    color: $success;
+  }
+
+  .dsm-card__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.26;
+    color: rgba($white, 0.6);
+  }
+}
+
+.portfolio-card {
+  position: relative;
+
+  .portfolio-card__img {
+    border-radius: $border-radius-md;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio-card__content {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #161616;
+    padding: 20px;
+    text-align: center;
+    border-top-right-radius: $border-radius-md;
+    border-top-left-radius: $border-radius-md;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
+
+  .portfolio-card__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 37px;
+    color: $success;
+  }
+
+  .portfolio-card__subtitle {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba($white, 0.2);
+  }
+}
+
+.package-card {
+  width: 100%;
+  height: 100%;
+  background-color: #161616;
+  border-radius: $border-radius-md;
+  padding: 36px;
+
+  .package-card__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .package-card__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 42px;
+  }
+
+  .package-card__img {
+    width: 85px;
+    min-width: 85px;
+    height: 85px;
+    margin-left: 24px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+
+  .package-card__uptitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+  }
+
+  .package-card__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 43px;
+    color: $success;
+  }
+
+  .package-card__body {
+    .package-card__body__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .package-card__list {
+    display: flex;
+    flex-wrap: wrap;
+    .package-card__list__item {
+      display: list-item;
+      width: calc(50% - 20px);
+      min-width: calc(50% - 20px);
+      padding-left: 10px;
+      margin-right: 20px;
+      list-style: url($icons-path + "/list-arrow.svg");
+    }
+  }
+
+  .package-card__footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 32px;
+
+    .package-card__footer__item {
+      width: 50%;
+      min-width: 50%;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        width: 25px;
+        min-width: 25px;
+        border-radius: 100%;
+        line-height: 25px;
+        text-align: center;
+        margin-left: 10px;
+        background-color: rgba($success, 0.4);
+      }
+
+      .package-card__footer__item__content {
+        .title {
+          display: block;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 26px;
+        }
+
+        .subtitle {
+          display: block;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 30px;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  .package-card__btn {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 26px;
+  }
+}
+
+.comment-card {
+  background-color: #161616;
+  border-radius: $border-radius-md;
+  padding: 18px 34px;
+
+  .comment-card__quite {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    &::after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: rgba($white, 0.2);
+    }
+    .comment-card__quite__sign {
+      position: relative;
+      width: 40px;
+      min-width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 80px;
+      color: $success;
+      font-weight: 400;
+      font-size: 58px;
+      background-color: rgba($success, 0.1);
+      margin-left: 14px;
+    }
+  }
+
+  .comment-card__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: rgba($white, 0.6);
+    margin-bottom: 16px;
+  }
+
+  .comment-card__commenter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .comment-card__commenter__rate {
+      width: 60px;
+      min-width: 60px;
+      height: 60px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(#edb518, 0.1);
+      margin-left: 14px;
+
+      img {
+        width: 31px;
+      }
+    }
+
+    .comment-card__commenter__name {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 34px;
+    }
+
+    .comment-card__commenter__status {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 34px;
+      color: rgba($white, 0.6);
+    }
+  }
+}
+
+.template-card {
+  background-color: #161616;
+  border-radius: $border-radius-md;
+
+  .template-card__img {
+    max-height: 246px;
+    border-radius: $border-radius-md;
+    overflow: hidden;
+  }
+
+  .template-card__title {
+    padding: 16px 24px 16px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 34px;
+    text-align: center;
+  }
+
+  .template-card__footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 24px 16px;
+  }
+
+  .template-card__item {
+    width: 50%;
+    min-width: 50%;
+    text-align: center;
+    .template-card__item__key {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 30px;
+      color: rgba($white, 0.6);
+      display: block;
+    }
+
+    .template-card__item__value {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 26px;
+      color: $success;
+      display: block;
+    }
+  }
+
+  .template-card__btn {
+    width: 100%;
+    margin-top: 20px;
+  }
+}

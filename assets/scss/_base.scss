@@ -1,8 +1,194 @@
 .container {
-    width: 100%;
-    max-width: 1576px;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 100%;
+  max-width: 1576px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-control {
+  width: 100%;
+  height: 60px;
+  border-radius: $border-radius-sm;
+  background-color: rgba($white, 0.03);
+  border: 0;
+  color: #fff;
+  font-family: $font-family, sans-serif;
+
+  &:focus {
+    background-color: rgba($white, 0.03);
+    color: #fff;
+    box-shadow: 0 0 0 0.25rem rgba($success, .25);
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba($white, 0.6);
+  }
+}
+
+textarea.form-control {
+  height: 180px;
+}
+
+.btn {
+  height: 60px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 60px;
+  padding: 0 25px;
+  border-radius: $border-radius-sm;
+  letter-spacing: -0.02em;
+
+  .icon {
+    margin-left: 5px;
+  }
+
+  &.btn-shadow {
+    &:active {
+      box-shadow: initial;
+    }
+  }
+}
+
+.btn-success {
+  &.btn-shadow {
+    @include btn-shadow($success);
+  }
+
+  &.btn-opacity {
+    @include btn-opacity($success);
+
+    &:hover {
+      background-color: $success;
+      color: $dark;
+    }
+  }
+}
+
+.btn-dark {
+  background-color: rgba($white, 0.05);
+  &.btn-shadow {
+    @include btn-shadow($dark);
+  }
+
+  &.btn-opacity {
+    @include btn-opacity($white);
+
+    &:hover {
+      background-color: rgba($white, 0.05);
+      color: $white;
+    }
+  }
+}
+
+.btn-primary {
+  &.btn-shadow {
+    @include btn-shadow($primary);
+  }
+
+  &.btn-opacity {
+    @include btn-opacity($primary);
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+.btn-danger {
+  &.btn-shadow {
+    @include btn-shadow($danger);
+  }
+
+  &.btn-opacity {
+    @include btn-opacity($danger);
+
+    &:hover {
+      background-color: $danger;
+      color: $dark;
+    }
+  }
+}
+
+.btn-secondary {
+  &.btn-shadow {
+    @include btn-shadow($secondary);
+  }
+
+  &.btn-opacity {
+    @include btn-opacity($secondary);
+
+    &:hover {
+      background-color: $secondary;
+      color: $white;
+    }
+  }
+}
+
+.btn-info {
+  &.btn-shadow {
+    @include btn-shadow($info);
+  }
+
+  &.btn-opacity {
+    @include btn-opacity($info);
+
+    &:hover {
+      background-color: $info;
+      color: $dark;
+    }
+  }
+}
+
+.btn-warning {
+  &.btn-shadow {
+    @include btn-shadow($warning);
+  }
+
+  &.btn-opacity {
+    @include btn-opacity($warning);
+
+    &:hover {
+      background-color: $warning;
+      color: $dark;
+    }
+  }
+}
+
+.nav-tabs {
+  width: fit-content;
+  margin: 0 auto 60px;
+  border-bottom: 1px solid rgba($white, 0.2);
+
+  .nav-link {
+    border: 0;
+    background: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    text-align: center;
+    color: rgba($white, 0.7);
+
+    &.active {
+      border: 0;
+      background: none;
+      color: $success;
+    }
+  }
+}
+
+ul {
+  // list-style-type: ;
+  li {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 6px;
+    color: rgba($white, 0.6);
+    list-style: url($icons-path + "/list-arrow.svg");
+  }
 }

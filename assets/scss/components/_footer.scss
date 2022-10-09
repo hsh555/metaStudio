@@ -1,0 +1,134 @@
+.footer {
+  margin-top: 95px;
+  background-color: initial;
+
+  .footer__list {
+    .footer__list__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 12px;
+    }
+
+    .footer__list__item {
+      margin-right: 20px;
+      margin-bottom: 6px;
+    }
+
+    .footer__list__link {
+      color: rgba($white, 0.6);
+
+      &:hover {
+        color: $success;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .footer__logo {
+    width: 101px;
+    margin: 0 auto 35px;
+  }
+
+  .footer__description {
+    text-align: center;
+
+    .footer__description__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 228.5%;
+      color: rgba($white, 0.6);
+    }
+  }
+
+  .footer__contact-us {
+    .footer__contact-us__title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 20px;
+    }
+
+    .footer__contact-us__item {
+      margin-bottom: 14px;
+      .footer__contact-us__item__title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+
+        .icon {
+          margin-left: 8px;
+        }
+      }
+
+      .footer__contact-us__item__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: rgba($white, 0.6);
+      }
+    }
+  }
+
+  .footer__newsletter {
+    display: flex;
+    align-items: center;
+
+    .form-group {
+        width: 100%;
+    }
+
+    .btn {
+        font-weight: 600;
+        min-width: fit-content;
+        margin-right: 18px;
+    }
+  }
+
+  .footer__top {
+    margin-bottom: 52px;
+  }
+
+  .footer__middle {
+    .footer__middle__inner {
+      padding: 42px 0 52px;
+      border-top: 1px solid rgba($white, 0.1);
+    }
+
+    .footer__middle__title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 6px;
+    }
+
+    .footer__middle__subtitle {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 25px;
+      color: rgba($white, 0.6);
+    }
+
+    .footer__middle__payment-supports {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .footer__middle__payment-supports__item {
+            margin-right: 26px;
+        }
+    }
+  }
+
+  .footer__bottom {
+    background-color: rgba($white, 0.1);
+    padding: 18px 0;
+
+    .footer__copyright {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 37px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.team {
+  background-color: rgba($white, 0.02);
+  padding: 36px 0;
+
+  .team__header {
+    text-align: center;
+    margin-bottom: 54px;
+  }
+
+  .team__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 37px;
+    color: $success;
+  }
+
+  .team__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    opacity: 0.7;
+  }
+
+  .team__splide {
+    .splide__slide {
+      position: relative;
+      border-radius: 130px;
+      overflow: hidden;
+      padding-bottom: 1px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        background: linear-gradient(360deg, #000000 8%, rgba(0, 0, 0, 0) 71%);
+      }
+
+      .splide__slide__img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        border-radius: 130px;
+        overflow: hidden;
+
+        img {
+          display: block;
+          height: 100% !important;
+        }
+      }
+
+      .splide__slide__data {
+        position: absolute;
+        bottom: 60px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .splide__slide__title {
+        font-weight: 700;
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 4px;
+      }
+
+      .splide__slide__subtitle {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        color: $success;
+      }
+    }
+    padding-bottom: 80px;
+
+    .team__splide__prev,
+    .team__splide__next {
+      width: 80px;
+      background-color: unset !important;
+      top: 97%;
+      z-index: 2;
+      // transform: rotate(180deg);
+
+      svg {
+        width: 100%;
+        fill: #fff;
+        path {
+          transform: translateX(-16px);
+        }
+      }
+    }
+
+    .team__splide__next {
+      left: 44%;
+    }
+
+    .team__splide__prev {
+      right: 44%;
+    }
+  }
+}

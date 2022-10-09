@@ -1,0 +1,58 @@
+.portfolio {
+  padding: 36px 0;
+  position: relative;
+  margin-bottom: 80px;
+
+  .portfolio__header {
+    text-align: center;
+    margin-bottom: 54px;
+    position: relative;
+
+    .portfolio__header__ellipse {
+      position: absolute;
+      width: 451px;
+      height: 451px;
+      right: calc(50% - 225px);
+      top: 0;
+      background: rgba($success, 0.1);
+      filter: blur(112.5px);
+    }
+  }
+
+  .portfolio__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 37px;
+    color: $success;
+  }
+
+  .portfolio__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    opacity: 0.7;
+  }
+
+  .portfolio__body {
+    nav {
+        position: relative;
+        z-index: 1;
+    }
+  }
+
+  .portfolio__footer {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .portfolio__bg {
+    position: absolute;
+    top: 110px;
+    right: -10px;
+    // right: calc(50% - 960px);
+    // width: 1920px;
+    width: 100%;
+    height: max-content;
+    z-index: -1;
+  }
+}
