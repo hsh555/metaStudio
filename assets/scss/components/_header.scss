@@ -1,13 +1,13 @@
 .header {
   background-color: initial;
   padding: 4rem 0 12px;
-  position: relative;
   z-index: 1;
 
   .header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
   .header__logo {
@@ -51,14 +51,7 @@
   }
 
   .header__ellipse {
-    display: block;
-    position: absolute;
-    width: 451px;
-    height: 451px;
-    right: -50px;
+    right: -100px;
     top: 30px;
-    background: $success;
-    opacity: 0.1;
-    filter: blur(112.5px);
   }
 }

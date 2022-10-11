@@ -1,68 +1,4 @@
 (function () {
-  // mobile-navbar-web
-
-  var mobileNavbarWebToggler = document.getElementById("mobile-navbar-toggler");
-  var mobileNavbarWebCloseBtn = document.querySelector(".mobile-navbar-web__close-btn");
-  if (mobileNavbarWebToggler && mobileNavbarWebCloseBtn) {
-    var mobileNavbarWeb = document.querySelector(".mobile-navbar-web");
-
-    mobileNavbarWebToggler.onclick = function () {
-      if (mobileNavbarWeb) {
-        mobileNavbarWeb.classList.remove("mobile-navbar-web--hide");
-        mobileNavbarWeb.classList.add("mobile-navbar-web--show");
-      }
-    };
-
-    mobileNavbarWebCloseBtn.onclick = function () {
-      if (mobileNavbarWeb) {
-        mobileNavbarWeb.classList.remove("mobile-navbar-web--show");
-        mobileNavbarWeb.classList.add("mobile-navbar-web--hide");
-      }
-    };
-  }
-
-  // mobile-navbar
-
-  var mobileNavbarToggler = document.getElementById("mobile-navbar-toggler");
-  var mobileNavbar = document.querySelector(".mobile-navbar");
-  if (mobileNavbarToggler && mobileNavbar) {
-    mobileNavbarToggler.onclick = function () {
-      if (mobileNavbar.classList.contains("mobile-navbar--hide")) {
-        mobileNavbar.classList.remove("mobile-navbar--hide");
-        mobileNavbar.classList.add("mobile-navbar--show");
-      } else {
-        mobileNavbar.classList.remove("mobile-navbar--show");
-        mobileNavbar.classList.add("mobile-navbar--hide");
-      }
-    };
-  }
-
-  // mobileNavbarWebCloseBtn.onclick = function() {
-  //   mobileNavbarWeb.classList.remove('mobile-navbar-web--show');
-  //   mobileNavbarWeb.classList.add('mobile-navbar-web--hide');
-  // };
-
-  // file-uploader init
-  var fileInput = document.getElementById("file-upload");
-  if (fileInput) {
-    var fileData = fileInput.nextElementSibling;
-    var image = fileData.querySelector("img");
-
-    fileInput.onchange = function (e) {
-      fileData.style.display = "block";
-
-      image.setAttribute("src", URL.createObjectURL(e.target.files[0]));
-    };
-
-    var deleteElement = fileData.querySelector(".file-delete");
-
-    deleteElement.onclick = function () {
-      fileInput.innerHTML = "";
-      image.setAttribute("src", "");
-      fileData.style.display = "none";
-    };
-  }
-
   // custom-select
   if (document.getElementsByClassName("custom-select")) {
     var x, i, j, l, ll, selElmnt, a, b, c;
@@ -150,16 +86,5 @@
     /* If the user clicks anywhere outside the select box,
     then close all select boxes: */
     document.addEventListener("click", closeAllSelect);
-  }
-
-  // list-accordion
-  var listAccordion = $('.list-accordion');
-
-  if (listAccordion) {
-    listAccordion.find('.list-accordion__header').click(function () {
-      $(this).next().slideToggle();
-      $(this).toggleClass('active');
-      $(this).find('.list-accordion__title icon').slideToggle();
-    });
   }
 })();

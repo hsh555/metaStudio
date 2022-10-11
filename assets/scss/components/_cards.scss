@@ -328,3 +328,49 @@
     margin-top: 20px;
   }
 }
+
+.order-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 90px 178px;
+  background: rgba(#000, 0.2);
+  backdrop-filter: blur(25px);
+  border-radius: 25px;
+
+  .order-card__title {
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 110.5%;
+    margin-bottom: 10px;
+  }
+
+  .order-card__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba($white, 0.7);
+  }
+
+  .order-card__body {
+    width: 100%;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  .order-card__body__star {
+    position: absolute;
+    right: 0;
+    top: -44px;
+  }
+
+  .order-card__footer {
+    .btn {
+      min-width: max-content;
+      height: 77px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 77px;
+    }
+  }
+}

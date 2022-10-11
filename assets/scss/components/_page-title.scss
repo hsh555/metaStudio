@@ -1,0 +1,52 @@
+.page-title {
+  margin: 90px 0 0;
+  position: relative;
+  z-index: 1;
+
+  .page-title__title {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 123.5%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .page-title__breadcrumb {
+    display: inline-block;
+    width: fit-content;
+    border-radius: $border-radius-sm;
+    padding: 12px 36px;
+    background-color: rgba($success, 0.1);
+  }
+
+  .page-title__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .page-title__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &::after,
+    &::before {
+      content: "";
+      width: 100%;
+      height: 1px;
+    }
+
+    &::after {
+      background: rgb(153, 227, 158);
+      background: linear-gradient(270deg, rgba(153, 227, 158, 0) 0%, rgba(153, 227, 158, 1) 100%);
+    }
+
+    &::before {
+      background: rgb(153, 227, 158);
+      background: linear-gradient(90deg, rgba(153, 227, 158, 0) 0%, rgba(153, 227, 158, 1) 100%);
+    }
+  }
+}

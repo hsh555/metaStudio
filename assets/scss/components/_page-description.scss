@@ -1,0 +1,35 @@
+.page-description {
+    margin-top: 70px;
+  .page-description__section {
+    margin-bottom: 92px;
+  }
+
+  .page-description__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 123.5%;
+    margin-bottom: 14px;
+  }
+
+  .page-description__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: rgba($white, 0.6);
+  }
+
+  .page-description__media {
+    margin-top: 62px;
+    display: flex;
+    column-gap: 30px;
+
+    .page-description__media__item {
+      border-radius: $border-radius-md;
+      overflow: hidden;
+
+      &:last-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}

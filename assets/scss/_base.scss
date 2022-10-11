@@ -19,7 +19,7 @@
   &:focus {
     background-color: rgba($white, 0.03);
     color: #fff;
-    box-shadow: 0 0 0 0.25rem rgba($success, .25);
+    box-shadow: 0 0 0 0.25rem rgba($success, 0.25);
   }
 
   &::placeholder {
@@ -182,7 +182,6 @@ textarea.form-control {
 }
 
 ul {
-  // list-style-type: ;
   li {
     font-weight: 400;
     font-size: 18px;
@@ -190,5 +189,35 @@ ul {
     padding: 6px;
     color: rgba($white, 0.6);
     list-style: url($icons-path + "/list-arrow.svg");
+  }
+}
+
+.breadcrumb {
+  margin-bottom: 0;
+  .breadcrumb-item {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: $success;
+    padding-left: 3px;
+
+    &.active {
+      font-weight: 700;
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      padding-right: 2px;
+    }
+
+    & > a {
+      color: $success;
+    }
+
+    .icon {
+      margin-left: 7px;
+    }
   }
 }

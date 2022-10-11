@@ -1,0 +1,23 @@
+.team-performance {
+  margin-bottom: 100px;
+  padding: 36px 0;
+
+  .team-performance__header {
+    text-align: center;
+    margin-bottom: 54px;
+  }
+
+  .team-performance__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 37px;
+    color: $success;
+  }
+
+  .team-performance__subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,48 @@
+.listing {
+  margin-bottom: 72px;
+  .listing__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 14px;
+    border-radius: $border-radius-sm;
+    background-color: #242424;
+    margin-bottom: 32px;
+  }
+
+  .listing__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+
+    .icon {
+      margin-left: 6px;
+    }
+  }
+
+  .listing__actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .listing__arrangement {
+    display: flex;
+    align-items: center;
+
+    .listing__arrangement__item {
+      &:first-of-type {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  .listing__sorting {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+
+    .form-label {
+      margin-bottom: 0;
+    }
+  }
+}
