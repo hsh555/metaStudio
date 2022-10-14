@@ -11582,7 +11582,7 @@ ul li {
   margin-bottom: 0;
 }
 .breadcrumb .breadcrumb-item {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 16px;
   line-height: 25px;
   color: #99E39E;
@@ -11595,7 +11595,11 @@ ul li {
   display: none;
 }
 .breadcrumb .breadcrumb-item::before {
+  content: "/";
+  font-weight: 500;
+  color: #99E39E;
   padding-right: 2px;
+  float: left;
 }
 .breadcrumb .breadcrumb-item > a {
   color: #99E39E;

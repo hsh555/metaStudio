@@ -261,7 +261,7 @@ ul {
 .breadcrumb {
   margin-bottom: 0;
   .breadcrumb-item {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 25px;
     color: $success;
@@ -275,7 +275,11 @@ ul {
     }
 
     &::before {
+      content: '/';
+      font-weight: 500;
+      color: $success;
       padding-right: 2px;
+      float: left;
     }
 
     & > a {
