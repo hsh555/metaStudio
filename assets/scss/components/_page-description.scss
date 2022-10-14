@@ -1,5 +1,5 @@
 .page-description {
-    margin-top: 70px;
+  margin-top: 70px;
   .page-description__section {
     margin-bottom: 92px;
   }
@@ -24,6 +24,7 @@
     column-gap: 30px;
 
     .page-description__media__item {
+      width: 100%;
       border-radius: $border-radius-md;
       overflow: hidden;
 
