@@ -293,6 +293,7 @@
     font-size: 24px;
     line-height: 34px;
     text-align: center;
+    color: $white;
   }
 
   .template-card__footer {
@@ -372,5 +373,229 @@
       font-size: 24px;
       line-height: 77px;
     }
+  }
+}
+
+.blog-card {
+  background-color: initial;
+
+  .blog-card__img {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0px -78px 42px rgba(0, 0, 0, 0.02), 0px 52px 64px rgba(0, 0, 0, 0.02);
+    border-radius: 13px;
+    overflow: hidden;
+    min-height: 200px;
+    margin-bottom: 24px;
+
+    img {
+      min-height: inherit;
+    }
+  }
+
+  .blog-card__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 8px;
+    color: $white;
+  }
+
+  .blog-card__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: rgba($white, 0.6);
+    margin-bottom: 12px;
+  }
+
+  .blog-card__link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    color: $success;
+
+    .icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+.newsletter-card {
+  margin-bottom: 35px;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  position: relative;
+  padding: 24px;
+  background: rgb(21, 30, 22);
+  background: linear-gradient(103deg, rgba(21, 30, 22, 0.27) 0%, rgba(116, 161, 119, 0.5) 100%);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url($images-path + "/newsletter-bg.png");
+    z-index: -1;
+    opacity: 0.08;
+  }
+
+  .newsletter-card__title {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    position: relative;
+    margin-bottom: 4px;
+
+    .icon {
+      margin-left: 7px;
+    }
+
+    &::after {
+      content: "";
+      margin-right: 12px;
+      width: 100%;
+      height: 1px;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='white' stroke-width='3' stroke-dasharray='3%2c 16' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      opacity: 1;
+      left: 0;
+      background: rgb(42, 47, 41);
+      background: linear-gradient(90deg, rgba(42, 47, 41, 1) 0%, rgba(42, 47, 41, 0.3) 100%);
+    }
+  }
+
+  .newsletter-card__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .newsletter-card__form {
+    margin-top: 16px;
+    .form-control {
+      background: rgba($black, 0.27);
+      border-radius: 12px;
+      height: 53px;
+      margin-bottom: 20px;
+
+      &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+    .btn {
+      border-radius: $border-radius-sm;
+      height: 53px;
+      width: 100%;
+      line-height: 53px;
+    }
+  }
+}
+
+.service-card {
+  background-color: rgba($black, 0.3);
+  border-radius: $border-radius;
+  padding: 49px 34px 34px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .service-card__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 123.5%;
+    color: $white;
+    margin-bottom: 22px;
+  }
+
+  .service-card__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: rgba($white, 0.6);
+  }
+
+  .service-card__link {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 34px;
+    margin-top: 30px;
+    
+    .icon {
+      margin-right: 8px;
+    }
+  }
+
+  &.service-card--warning {
+    .service-card__link {
+      color: $warning;
+      
+      .icon path {
+        fill: $warning;
+      }
+    }
+    .service-card__icon {
+      background-color: rgba($warning, 0.05);
+    }
+  }
+
+  &.service-card--success {
+    .service-card__link {
+      color: $success;
+      
+      .icon path {
+        fill: $success;
+      }
+    }
+
+    .service-card__icon {
+      background-color: rgba($success, 0.05);
+    }
+  }
+
+  &.service-card--danger {
+    .service-card__link {
+      color: $danger;
+      
+      .icon path {
+        fill: $danger;
+      }
+    }
+    .service-card__icon {
+      background-color: rgba($danger, 0.05);
+    }
+  }
+
+  &.service-card--info {
+    .service-card__link {
+      color: $info;
+      
+      .icon path {
+        fill: $info;
+      }
+    }
+    .service-card__icon {
+      background-color: rgba($info, 0.05);
+    }
+  }
+
+  .service-card__icon {
+    width: 140px;
+    height: 140px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 140px;
+    margin-bottom: 46px;
   }
 }
