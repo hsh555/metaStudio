@@ -13325,6 +13325,14 @@ ul li {
 .auth .auth__poster {
   width: 50%;
   min-width: 50%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.auth .auth__poster .auth__poster__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
   background-image: url("../images/auth-poster.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -13332,7 +13340,6 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 .auth .auth__poster::after {
   content: "";
@@ -13354,9 +13361,10 @@ ul li {
   width: 50%;
   min-width: 50%;
   padding: 64px;
+  margin-right: auto;
   background-image: url("../images/auth-content-bg.png");
+  background-size: 200%;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 .auth .auth__content .auth__content__logo {
   width: 99px;
