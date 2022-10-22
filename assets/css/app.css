@@ -12032,6 +12032,8 @@ ul li {
   padding: 40px;
 }
 .swal2-container .swal2-popup {
+  width: 100%;
+  max-width: 640px;
   border-radius: 20px;
   background-color: #000;
   padding: 14px 14px 38px;

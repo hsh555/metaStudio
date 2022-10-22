@@ -299,6 +299,8 @@
   }
 
   .swal2-popup {
+    width: 100%;
+    max-width: 640px;
     border-radius: $border-radius;
     background-color: $black;
     padding: 14px 14px 38px;
