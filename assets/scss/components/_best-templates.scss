@@ -1,5 +1,6 @@
 .best-templates {
   padding-bottom: 80px;
+
   .best-templates__right {
     height: 100%;
     display: flex;
@@ -20,11 +21,54 @@
     font-size: 16px;
     line-height: 194%;
     text-align: right;
-    color: rgba($white, .7);
+    color: rgba($white, 0.7);
     margin-bottom: 20px;
   }
 
   .best-templates__btn {
     width: fit-content;
+  }
+
+  .best-templates__left-wrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .best-templates {
+    .best-templates__right {
+      justify-content: flex-start;
+    }
+    .best-templates__right {
+      margin-bottom: 34px;
+    }
+
+    .splide__track {
+      padding-bottom: 200px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .best-templates {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    .best-templates__title {
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 123.5%;
+      margin-bottom: 3px;
+
+      & > div {
+        display: inline-block;
+      }
+    }
+
+    .best-templates__text {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 194%;
+      margin-bottom: 10px;
+    }
   }
 }

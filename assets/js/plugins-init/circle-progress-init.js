@@ -1,9 +1,9 @@
 $("#first-circle").circleProgress({
-  value: .8,
+  value: 0.8,
   size: 177,
   lineCap: "round",
   thickness: 10,
-  reverse:true,
+  reverse: true,
   startAngle: 180,
   fill: {
     gradient: ["#99E39E", "#99e39e38"],
@@ -16,12 +16,17 @@ $("#second-circle").circleProgress({
   size: 177,
   lineCap: "round",
   thickness: 10,
-  reverse:true,
+  reverse: true,
   startAngle: 180,
   fill: {
     gradient: ["#99E39E", "#99e39e38"],
   },
   animation: { duration: 1200, easing: "circleProgressEasing" },
+  responsive: {
+    1200: {
+      size: 100,
+    },
+  },
 });
 
 $("#third-circle").circleProgress({
@@ -29,7 +34,7 @@ $("#third-circle").circleProgress({
   size: 177,
   lineCap: "round",
   thickness: 10,
-  reverse:true,
+  reverse: true,
   startAngle: 180,
   fill: {
     gradient: ["#99E39E", "#99e39e38"],
@@ -42,7 +47,7 @@ $("#fourth-circle").circleProgress({
   size: 177,
   lineCap: "round",
   thickness: 10,
-  reverse:true,
+  reverse: true,
   startAngle: 180,
   fill: {
     gradient: ["#99E39E", "#99e39e38"],
@@ -55,7 +60,7 @@ $("#fifth-circle").circleProgress({
   size: 177,
   lineCap: "round",
   thickness: 10,
-  reverse:true,
+  reverse: true,
   startAngle: 180,
   fill: {
     gradient: ["#99E39E", "#99e39e38"],

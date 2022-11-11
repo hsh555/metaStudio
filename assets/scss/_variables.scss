@@ -1,9 +1,9 @@
 // colors
-$success: #99E39E;
-$info: #69CDFF;
-$danger: #FE3745;
-$warning: #FFD00D;
-$dark: #1E1E1E;
+$success: #99e39e;
+$info: #69cdff;
+$danger: #fe3745;
+$warning: #ffd00d;
+$dark: #1e1e1e;
 $black: #000;
 $white: #fff;
 
@@ -29,3 +29,6 @@ $base-transition: 0.2s ease;
 $fonts-path: "../fonts";
 $images-path: "../images";
 $icons-path: "../images/icons";
+
+// grid
+$grid-gutter-width: 40px;

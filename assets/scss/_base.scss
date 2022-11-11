@@ -1,8 +1,6 @@
 .container {
   width: 100%;
   max-width: 1576px;
-  padding-right: 20px;
-  padding-left: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -60,6 +58,7 @@
   border-radius: $border-radius-sm;
   background-color: rgba($white, 0.03);
   border: 0;
+  font-size: 16px;
   color: #fff;
   font-family: $font-family, sans-serif;
 
@@ -71,17 +70,19 @@
 
   &::placeholder {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     color: rgba($white, 0.6);
   }
 }
 
 textarea.form-control {
   height: 180px;
+  padding: 16px 13px;
 }
 
 .btn {
   height: 60px;
+  min-width: fit-content;
   font-weight: 500;
   font-size: 20px;
   line-height: 60px;
@@ -290,6 +291,8 @@ ul {
   padding: 25px 23px;
   border-radius: 11px;
   border: 0;
+  font-size: 18px;
+  line-height: 36px;
 
   .icon {
     margin-left: 14px;
@@ -297,7 +300,7 @@ ul {
   }
 
   &.alert-success {
-    background-color: rgba($success, .1);
+    background-color: rgba($success, 0.1);
     color: $success;
 
     .icon {
@@ -308,7 +311,7 @@ ul {
   }
 
   &.alert-warning {
-    background-color: rgba($warning, .1);
+    background-color: rgba($warning, 0.1);
     color: $warning;
 
     .icon {
@@ -319,7 +322,7 @@ ul {
   }
 
   &.alert-primary {
-    background-color: rgba($primary, .1);
+    background-color: rgba($primary, 0.1);
     color: $primary;
 
     .icon {
@@ -330,7 +333,7 @@ ul {
   }
 
   &.alert-danger {
-    background-color: rgba($danger, .1);
+    background-color: rgba($danger, 0.1);
     color: $danger;
 
     .icon {
@@ -341,8 +344,8 @@ ul {
   }
 
   &.alert-dark {
-    background-color: rgba($white, .01);
-    color: rgba($white, .6);
+    background-color: rgba($white, 0.01);
+    color: rgba($white, 0.6);
 
     .icon {
       path {
@@ -352,7 +355,7 @@ ul {
   }
 
   &.alert-info {
-    background-color: rgba($info, .1);
+    background-color: rgba($info, 0.1);
     color: $info;
 
     .icon {
@@ -365,7 +368,10 @@ ul {
 
 .breadcrumb {
   margin-bottom: 0;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   .breadcrumb-item {
+    min-width: fit-content;
     font-weight: 400;
     font-size: 16px;
     line-height: 25px;
@@ -410,15 +416,16 @@ ul {
   }
 
   .accordion-button {
-    height: 66px;
+    min-height: 66px;
     background-color: rgba($white, 0.05) !important;
     border-radius: $border-radius-sm !important;
     margin-bottom: 6px;
     font-weight: 500;
     font-size: 18px;
-    line-height: 70px;
+    line-height: 30px;
     color: $white;
-    padding: 0 25px;
+    padding: 20px 30px 20px 40px;
+    text-align: right;
 
     &:focus {
       box-shadow: none !important;
@@ -443,5 +450,106 @@ ul {
     color: $black;
     background-color: $success !important;
     border-radius: $border-radius-sm !important;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .btn {
+    height: 46px;
+    line-height: 46px;
+    padding: 0 23px;
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .form-control {
+    height: 46px;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: $border-radius-sm;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .accordion {
+    .accordion-button {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      padding: 14px 20px 14px 30px;
+    }
+
+    .accordion-body {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 23px;
+      padding: 16px 20px;
+    }
+  }
+  .form-check-input {
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 5px !important;
+  }
+
+  .alert {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 14px 16px;
+
+    .icon {
+      margin-left: 5px;
+    }
+  }
+
+  .form-check-label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .page-nav-tabs-wrapper {
+    width: 100%;
+    overflow: auto;
+    margin-top: 60px;
+
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .nav-tabs {
+    &.page-nav-tabs {
+      min-width: 440px;
+      margin-bottom: 11px;
+      flex-wrap: nowrap;
+      .nav-link {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 123.5%;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .breadcrumb {
+    margin-bottom: 0;
+    .breadcrumb-item {
+      font-size: 12px;
+      line-height: 19px;
+
+      &.active {
+        font-weight: 500;
+      }
+    }
   }
 }

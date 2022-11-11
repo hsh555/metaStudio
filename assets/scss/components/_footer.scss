@@ -11,6 +11,7 @@
     }
 
     .footer__list__item {
+      width: 100%;
       margin-right: 20px;
       margin-bottom: 6px;
     }
@@ -74,14 +75,20 @@
     display: flex;
     align-items: center;
 
+    .form-control {
+      &::placeholder {
+        color: rgba($white, 0.3);
+      }
+    }
+
     .form-group {
-        width: 100%;
+      width: 100%;
     }
 
     .btn {
-        font-weight: 600;
-        min-width: fit-content;
-        margin-right: 18px;
+      font-weight: 600;
+      min-width: fit-content;
+      margin-right: 18px;
     }
   }
 
@@ -110,13 +117,13 @@
     }
 
     .footer__middle__payment-supports {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
-        .footer__middle__payment-supports__item {
-            margin-right: 26px;
-        }
+      .footer__middle__payment-supports__item {
+        margin-right: 26px;
+      }
     }
   }
 
@@ -129,6 +136,177 @@
       font-size: 24px;
       line-height: 37px;
       text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .footer {
+    .footer__list {
+      .footer__list__title {
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 24px;
+      }
+
+      .footer__list__item {
+        margin-bottom: 0;
+      }
+
+      .footer__list__link {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+    }
+
+    .footer__description {
+      .footer__description__text {
+        font-size: 14px;
+      }
+    }
+
+    .footer__contact-us {
+      .footer__contact-us__title {
+        font-size: 17px;
+        line-height: 24px;
+        margin-bottom: 20px;
+      }
+
+      .footer__contact-us__item {
+        margin-bottom: 14px;
+        .footer__contact-us__item__title {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 26px;
+        }
+
+        .footer__contact-us__item__subtitle {
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .footer__newsletter {
+      .form-control {
+        min-width: 200px;
+      }
+    }
+
+    .footer__middle {
+      .footer__middle__title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      .footer__middle__subtitle {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    .footer__list {
+      .footer__list__title {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 26px;
+        margin-bottom: 3px;
+      }
+
+      .footer__list__link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 37px;
+        padding-right: 0;
+      }
+    }
+
+    .footer__contact-us {
+      .footer__contact-us__title {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 26px;
+        margin-bottom: 8px;
+      }
+
+      .footer__contact-us__item {
+        margin-bottom: 10px;
+        .footer__contact-us__item__title {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          margin-bottom: 2px;
+        }
+
+        .footer__contact-us__item__subtitle {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .footer__top {
+      margin-bottom: 39px;
+    }
+
+    .footer__newsletter {
+      .form-control {
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+
+    .footer__middle {
+      .footer__middle__inner {
+        padding: 35px 0;
+      }
+      .footer__middle__payment-supports {
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+
+    .footer__bottom {
+      padding: 12px 0;
+      .footer__copyright {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .footer {
+    .footer__middle {
+      .footer__middle__payment-supports {
+        justify-content: space-between;
+
+        .footer__middle__payment-supports__item {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .footer {
+    .footer__newsletter {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .btn {
+      margin-right: 0 !important;
+      margin-top: 15px;
     }
   }
 }

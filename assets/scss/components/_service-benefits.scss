@@ -26,8 +26,8 @@
     list-style: none !important;
 
     .service-benefits__list__item {
-      width: 48%;
-      min-width: 48%;
+      width: 50%;
+      min-width: 50%;
       list-style: none !important;
       position: relative;
       padding-right: 16px;
@@ -37,6 +37,38 @@
         font-weight: 500;
         position: absolute;
         right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .service-benefits {
+    margin-top: 83px;
+    margin-bottom: 64px;
+
+    .service-benefits__header {
+      margin-bottom: 10px;
+    }
+
+    .service-benefits__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 123.5%;
+      margin-bottom: 5px;
+    }
+
+    .service-benefits__text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    .service-benefits__list {
+      .service-benefits__list__item {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 35px;
       }
     }
   }

@@ -1,4 +1,24 @@
 (function () {
+  // mobile-menu
+  var mobileMenuToggler = document.getElementById("menu-toggler");
+  var mobileMenu = document.getElementById("mobile-menu");
+  mobileMenuToggler.onclick = function () {
+    mobileMenu.style.display = "block";
+
+    setTimeout(function () {
+      mobileMenu.classList.add("show");
+    }, 0);
+  };
+
+  mobileMenu.onclick = function (e) {
+    if (e.target.closest(".mobile-menu__nav") == null) {
+      mobileMenu.classList.remove("show");
+      setTimeout(function () {
+        mobileMenu.style.display = "none";
+      }, 300);
+    }
+  };
+
   // custom-select
   if (document.getElementsByClassName("custom-select")) {
     var x, i, j, l, ll, selElmnt, a, b, c;

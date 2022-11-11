@@ -20,4 +20,36 @@
     line-height: 25px;
     opacity: 0.7;
   }
+
+  .team-performance__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .team-performance__item {
+    min-width: 20%;
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .team-performance {
+    margin-bottom: 34px;
+    .team-performance__header {
+      margin-bottom: 32px;
+    }
+
+    .team-performance__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    .team-performance__subtitle {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
 }

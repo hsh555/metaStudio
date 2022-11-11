@@ -10,6 +10,15 @@
     position: relative;
   }
 
+  .header__menu-toggler {
+    display: none;
+    border: 0;
+    background-color: unset !important;
+    box-shadow: none !important;
+    border-radius: 0;
+    outline: 0;
+  }
+
   .header__logo {
     width: 101px;
   }
@@ -25,7 +34,7 @@
       line-height: 31px;
       padding: 10px 26px;
       text-align: center;
-      color: rgba($white, .7);
+      color: rgba($white, 0.7);
       position: relative;
 
       &::after {
@@ -53,5 +62,30 @@
   .header__ellipse {
     right: -100px;
     top: 30px;
+  }
+}
+
+@media only screen and(max-width: 992px) {
+  .header {
+    padding: 37px 0 10px;
+    .header__logo {
+      width: 64px;
+    }
+
+    .header__menu-toggler {
+      display: block;
+    }
+
+    .header__nav {
+      display: none;
+    }
+
+    .header__actions {
+      display: none;
+    }
+
+    .header__ellipse {
+      display: none;
+    }
   }
 }

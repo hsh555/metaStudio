@@ -21,6 +21,10 @@
     font-size: 20px;
     border: 0;
     line-height: 32px;
+    
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgb($success, .25);
+    }
 
     &:hover {
       background-color: #d9d9d9;
@@ -36,6 +40,19 @@
       &:hover {
         opacity: 0.2;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .pagination-nav {
+    margin-top: 52px;
+    margin-bottom: 12px;
+  }
+
+  .pagination {
+    .page-item {
+      padding: 0 3px;
     }
   }
 }

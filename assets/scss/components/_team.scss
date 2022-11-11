@@ -86,7 +86,6 @@
       background-color: unset !important;
       top: 97%;
       z-index: 2;
-      // transform: rotate(180deg);
 
       svg {
         width: 100%;
@@ -98,11 +97,52 @@
     }
 
     .team__splide__next {
-      left: 44%;
+      left: calc(50% - 80px);
     }
 
     .team__splide__prev {
-      right: 44%;
+      right: calc(50% - 80px);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .team {
+    .team__header {
+      margin-bottom: 10px;
+    }
+    .team__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    .team__subtitle {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .team__splide {
+      padding-bottom: 60px;
+
+      .splide__slide {
+        .splide__slide__title {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 31px;
+        }
+
+        .splide__slide__subtitle {
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 20px;
+        }
+
+        .splide__slide__data {
+          bottom: 30px;
+        }
+      }
     }
   }
 }

@@ -17,6 +17,18 @@
         <div class="row">
           <div class="col-12">
             <div class="header__inner">
+              <button class="header__menu-toggler" id="menu-toggler">
+                <span class="icon">
+                  <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.385498 8.49992C0.385498 8.06846 0.735279 7.71867 1.16675 7.71867H17.833C18.2645 7.71867 18.6142 8.06846 18.6142 8.49992C18.6142 8.93138 18.2645 9.28117 17.833 9.28117H1.16675C0.735279 9.28117 0.385498 8.93138 0.385498 8.49992ZM3.80536 15.7916C3.80536 15.3601 4.15514 15.0103 4.58661 15.0103H17.8334C18.2649 15.0103 18.6147 15.3601 18.6147 15.7916C18.6147 16.223 18.2649 16.5728 17.8334 16.5728H4.58661C4.15514 16.5728 3.80536 16.223 3.80536 15.7916ZM9.73123 1.20825C9.73123 0.776783 10.081 0.427002 10.5125 0.427002H17.8334C18.2649 0.427002 18.6147 0.776783 18.6147 1.20825C18.6147 1.63972 18.2649 1.9895 17.8334 1.9895H10.5125C10.081 1.9895 9.73123 1.63972 9.73123 1.20825Z"
+                      fill="white"
+                    />
+                  </svg>
+                </span>
+              </button>
               <div class="header__logo">
                 <img src="./assets/images/logo.png" alt="" />
               </div>
@@ -50,13 +62,46 @@
                   ورود یا ثبت نام
                 </a>
               </div>
-              <div class="ellipse header__ellipse"></div>
             </div>
           </div>
         </div>
       </div>
+      <div class="ellipse header__ellipse"></div>
     </header>
     <!-- end header -->
+
+    <!-- start mobile menu section -->
+    <section class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-menu__nav">
+        <a href="#" class="mobile-menu__nav__link">صفحه اصلی</a>
+        <a href="#" class="mobile-menu__nav__link">خدمات ما</a>
+        <a href="#" class="mobile-menu__nav__link">نمونه کار های ما</a>
+        <a href="#" class="mobile-menu__nav__link">تماس با ما</a>
+        <a href="#" class="mobile-menu__nav__link mobile-menu__nav__link--auth">
+          <span class="icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.41797 6.29995C7.6763 3.29995 9.21797 2.07495 12.593 2.07495H12.7013C16.4263 2.07495 17.918 3.56662 17.918 7.29162V12.725C17.918 16.45 16.4263 17.9416 12.7013 17.9416H12.593C9.24297 17.9416 7.7013 16.7333 7.4263 13.7833"
+                stroke="#99E39E"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M1.66797 10H12.4013" stroke="#99E39E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M10.543 7.20825L13.3346 9.99992L10.543 12.7916"
+                stroke="#99E39E"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          ورود یا ثبت نام
+        </a>
+      </nav>
+    </section>
+    <!-- end mobile menu section -->
 
     <!-- start page-title section -->
     <section class="page-title">
@@ -100,7 +145,7 @@
     <section class="page-intro page-intro--has-items">
       <div class="container">
         <div class="row">
-          <div class="col-8">
+          <div class="col-12 col-lg-7 col-xl-8 order-2 order-lg-1">
             <div class="page-intro__content">
               <h3 class="page-intro__title">
                 <span class="icon">
@@ -132,7 +177,7 @@
               </div>
             </div>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-5 col-xl-4 mx-auto order-1 order-lg-2">
             <div class="page-intro__img">
               <img src="./assets/images/page-intro-single-service.png" alt="" />
             </div>
@@ -146,7 +191,7 @@
     <section class="service-benefits">
       <div class="container">
         <div class="row">
-          <div class="col-7">
+          <div class="col-12 col-md-7">
             <div class="service-benefits__header">
               <h3 class="service-benefits__title">استفاده از خدمات ما چه مزایایی دارد؟</h3>
               <div class="service-benefits__text">
@@ -156,7 +201,7 @@
               </div>
             </div>
           </div>
-          <div class="col-5">
+          <div class="col-12 col-md-5">
             <ul class="service-benefits__list">
               <li class="service-benefits__list__item">سریع تماشا کردن ویدیو ها</li>
               <li class="service-benefits__list__item">سریع تماشا کردن ویدیو ها</li>
@@ -182,50 +227,52 @@
               <h6 class="portfolio__subtitle">جدید ترین نمونه کار ها</h6>
             </div>
           </div>
-          <div class="col-12">
-            <div class="portfolio__body">
-              <div class="row g-4">
-                <div class="col-3">
-                  <div class="portfolio-card">
-                    <div class="portfolio-card__img">
-                      <img src="./assets/images/portfolio-1.png" alt="" />
-                    </div>
-                    <div class="portfolio-card__content">
-                      <a href="#" class="portfolio-card__title">طراحی وبسایت دیجی کالا</a>
-                      <div class="portfolio-card__subtitle">Digi kala website design</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="portfolio-card">
-                    <div class="portfolio-card__img">
-                      <img src="./assets/images/portfolio-2.png" alt="" />
-                    </div>
-                    <div class="portfolio-card__content">
-                      <a href="#" class="portfolio-card__title">طراحی وبسایت دیجی کالا</a>
-                      <div class="portfolio-card__subtitle">Digi kala website design</div>
+          <div class="col-12 p-0">
+            <div class="splide portfolio__splide">
+              <div class="splide__track portfolio__body">
+                <div class="splide__list">
+                  <div class="splide__slide">
+                    <div class="portfolio-card">
+                      <div class="portfolio-card__img">
+                        <img src="./assets/images/portfolio-1.png" alt="" />
+                      </div>
+                      <div class="portfolio-card__content">
+                        <a href="#" class="portfolio-card__title">طراحی وبسایت دیجی کالا</a>
+                        <div class="portfolio-card__subtitle">Digi kala website design</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-3">
-                  <div class="portfolio-card">
-                    <div class="portfolio-card__img">
-                      <img src="./assets/images/portfolio-3.png" alt="" />
-                    </div>
-                    <div class="portfolio-card__content">
-                      <a href="#" class="portfolio-card__title">طراحی وبسایت دیجی کالا</a>
-                      <div class="portfolio-card__subtitle">Digi kala website design</div>
+                  <div class="splide__slide">
+                    <div class="portfolio-card">
+                      <div class="portfolio-card__img">
+                        <img src="./assets/images/portfolio-2.png" alt="" />
+                      </div>
+                      <div class="portfolio-card__content">
+                        <a href="#" class="portfolio-card__title">طراحی وبسایت دیجی کالا</a>
+                        <div class="portfolio-card__subtitle">Digi kala website design</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-3">
-                  <div class="portfolio-card">
-                    <div class="portfolio-card__img">
-                      <img src="./assets/images/portfolio-4.png" alt="" />
+                  <div class="splide__slide">
+                    <div class="portfolio-card">
+                      <div class="portfolio-card__img">
+                        <img src="./assets/images/portfolio-3.png" alt="" />
+                      </div>
+                      <div class="portfolio-card__content">
+                        <a href="#" class="portfolio-card__title">طراحی وبسایت دیجی کالا</a>
+                        <div class="portfolio-card__subtitle">Digi kala website design</div>
+                      </div>
                     </div>
-                    <div class="portfolio-card__content">
-                      <a href="#" class="portfolio-card__title">طراحی وبسایت دیجی کالا</a>
-                      <div class="portfolio-card__subtitle">Digi kala website design</div>
+                  </div>
+                  <div class="splide__slide">
+                    <div class="portfolio-card">
+                      <div class="portfolio-card__img">
+                        <img src="./assets/images/portfolio-4.png" alt="" />
+                      </div>
+                      <div class="portfolio-card__content">
+                        <a href="#" class="portfolio-card__title">طراحی وبسایت دیجی کالا</a>
+                        <div class="portfolio-card__subtitle">Digi kala website design</div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -246,14 +293,14 @@
     <section class="faqs mb-155">
       <div class="container">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <div class="faqs__media">
               <div class="faqs__img">
                 <img src="./assets/images/faqs-img.png" alt="" />
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-lg-6">
             <div class="faqs__content">
               <div class="faqs__header pt-0">
                 <h6 class="faqs__uptitle">سوالات متداول</h6>
@@ -359,7 +406,7 @@
     <!-- end faqs section -->
 
     <!-- start comments section -->
-    <section class="comments mb-116">
+    <section class="comments mb-74 mb-lg-116">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -555,7 +602,7 @@
       <div class="footer__top">
         <div class="container">
           <div class="row">
-            <div class="col-2">
+            <div class="col-6 col-md-4 col-lg-2 order-2 order-lg-1">
               <ul class="footer__list">
                 <h5 class="footer__list__title">ویژگی های پکیج طلایی:</h5>
                 <li href="#" class="footer__list__item">
@@ -575,7 +622,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-2">
+            <div class="col-6 col-md-4 col-lg-2 order-3 order-lg-2">
               <ul class="footer__list">
                 <h5 class="footer__list__title">ویژگی های پکیج طلایی:</h5>
                 <li href="#" class="footer__list__item">
@@ -595,7 +642,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-lg-4 order-1 order-lg-3 mb-4 mb-lg-0">
               <div class="footer__description">
                 <div class="footer__logo">
                   <img src="./assets/images/logo.png" alt="" />
@@ -607,7 +654,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4 order-4 order-lg-4 mt-4 mt-md-0">
               <div class="footer__contact-us">
                 <h5 class="footer__contact-us__title">ویژگی های پکیج طلایی:</h5>
                 <div class="footer__contact-us__item">
@@ -705,14 +752,14 @@
           <div class="row">
             <div class="col-12">
               <div class="footer__middle__inner">
-                <div class="row">
-                  <div class="col-4">
+                <div class="row g-3">
+                  <div class="col-12 col-xl-4">
                     <div class="footer__middle__right">
                       <h4 class="footer__middle__title">میخوای همیشه از ما باخبر باشی؟</h4>
                       <div class="footer__middle__subtitle">اطلاعیه، تخفیف، جشنواره و...</div>
                     </div>
                   </div>
-                  <div class="col-4">
+                  <div class="col-12 col-md-6 col-xl-4">
                     <form class="footer__newsletter">
                       <div class="form-group">
                         <input type="text" class="form-control" placeholder="آدرس ایمیل خود را وارد کنید..." />
@@ -720,7 +767,7 @@
                       <button class="btn btn-success btn-shadow">عضویت در خبرنامه</button>
                     </form>
                   </div>
-                  <div class="col-4">
+                  <div class="col-12 col-md-6 col-xl-4">
                     <div class="footer__middle__payment-supports">
                       <div href="#" class="footer__middle__payment-supports__item">
                         <img src="./assets/images/meli.png" alt="" />
@@ -746,7 +793,7 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-              <div class="footer__copyright">تمامی حقوق مادی و معنوی این وبسایت به عهده گروه متا است</div>
+              <div class="footer__copyright">تمامی حقوق مادی و معنوی این وبسایت به عهده <span class="fw-bold">گروه متا </span> است</div>
             </div>
           </div>
         </div>
@@ -756,10 +803,10 @@
 
     <!-- js links -->
     <script src="./assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-   
+
     <script src="./assets/vendor/splide/splide.min.js"></script>
     <script src="./assets/js/plugins-init/splide-init.js"></script>
-   
+
     <script src="./assets/js/app.js"></script>
   </body>
 </html>

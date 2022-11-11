@@ -4,3 +4,10 @@
   position: relative;
   z-index: 1;
 }
+
+@media only screen and (max-width: 992px) {
+  .services {
+    margin-top: 44px;
+    margin-bottom: 29px;
+  }
+}

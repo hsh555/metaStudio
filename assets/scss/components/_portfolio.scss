@@ -35,8 +35,8 @@
 
   .portfolio__body {
     nav {
-        position: relative;
-        z-index: 1;
+      position: relative;
+      z-index: 1;
     }
   }
 
@@ -48,11 +48,57 @@
   .portfolio__bg {
     position: absolute;
     top: 110px;
-    right: -10px;
-    // right: calc(50% - 960px);
-    // width: 1920px;
+    right: 0;
     width: 100%;
     height: max-content;
     z-index: -1;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .portfolio {
+    margin-bottom: 0;
+
+    .portfolio__bg {
+      width: 100%;
+      min-height: 700px;
+      top: 500px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url($images-path + "/portfolio-bg.png");
+      img {
+        display: none;
+      }
+    }
+    .portfolio__header {
+      margin-bottom: 23px;
+
+      .portfolio__header__ellipse {
+        position: absolute;
+        width: 235px;
+        height: 235px;
+        right: calc(50% - 118px);
+        top: -50px;
+        filter: blur(35.5px);
+        z-index: -1;
+      }
+    }
+
+    .portfolio__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    .portfolio__subtitle {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .portfolio__footer {
+      margin-top: 26px;
+    }
   }
 }

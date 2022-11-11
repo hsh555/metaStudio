@@ -44,5 +44,93 @@
         vertical-align: 2px;
       }
     }
+
+    .form-control {
+      &::placeholder {
+        color: rgba($white, 0.3);
+      }
+    }
+
+    textarea.form-control {
+      height: 60px;
+      padding: 16px 13px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .contact {
+    .contact__form {
+      input.form-control {
+        height: 51px;
+        font-weight: 500;
+        font-size: 13px;
+        &::placeholder {
+          font-weight: 500;
+          font-size: 13px;
+        }
+      }
+      textarea.form-control {
+        min-height: 156px;
+        font-size: 13px;
+
+        &::placeholder {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contact {
+    margin-top: 50px !important;
+
+    .contact__inner {
+      padding: 35px 24px;
+      border-radius: $border-radius;
+    }
+
+    .contact__header {
+      margin-bottom: 34px;
+    }
+
+    .contact__title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    .contact__subtitle {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .contact__form {
+      .contact__form__footer {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact {
+    .contact__form {
+      .contact__form__note {
+        display: none;
+      }
+
+      .contact__form__footer {
+        .btn {
+          height: 63px;
+          width: 100%;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 63px;
+        }
+      }
+    }
   }
 }
