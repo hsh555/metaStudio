@@ -142,8 +142,137 @@ document.addEventListener("DOMContentLoaded", function () {
     }).mount();
   }
 
+  if (document.querySelector(".portfolio__splide")) {
+    var portfolioSplide1 = new Splide(".splide.portfolio__splide1", {
+      perPage: 4,
+      perMove: 1,
+      type: "slide",
+      gap: "40px",
+      focus: "center",
+      padding: "20px",
+      direction: "rtl",
+      pagination: false,
+      speed: 1000,
+      autoPlay: false,
+      arrows: false,
+      breakpoints: {
+        600: {
+          perPage: 1,
+          gap: "20px",
+          padding: "40px",
+          type: "loop",
+        },
+        800: {
+          perPage: 2,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+
+        1000: {
+          perPage: 3,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+        1180: {
+          perPage: 4,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+      },
+    }).mount();
+  }
+
+  if (document.querySelector(".portfolio__splide")) {
+    var portfolioSplide2 = new Splide(".splide.portfolio__splide2", {
+      perPage: 4,
+      perMove: 1,
+      type: "slide",
+      gap: "40px",
+      focus: "center",
+      padding: "20px",
+      direction: "rtl",
+      pagination: false,
+      speed: 1000,
+      autoPlay: false,
+      arrows: false,
+      breakpoints: {
+        600: {
+          perPage: 1,
+          gap: "20px",
+          padding: "40px",
+          type: "loop",
+        },
+        800: {
+          perPage: 2,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+
+        1000: {
+          perPage: 3,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+        1180: {
+          perPage: 4,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+      },
+    }).mount();
+  }
+
+  if (document.querySelector(".portfolio__splide")) {
+    var portfolioSplide3 = new Splide(".splide.portfolio__splide3", {
+      perPage: 4,
+      perMove: 1,
+      type: "slide",
+      gap: "40px",
+      focus: "center",
+      padding: "20px",
+      direction: "rtl",
+      pagination: false,
+      speed: 1000,
+      autoPlay: false,
+      arrows: false,
+      breakpoints: {
+        600: {
+          perPage: 1,
+          gap: "20px",
+          padding: "40px",
+          type: "loop",
+        },
+        800: {
+          perPage: 2,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+
+        1000: {
+          perPage: 3,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+        1180: {
+          perPage: 4,
+          gap: "20px",
+          padding: "20px",
+          type: "slide",
+        },
+      },
+    }).mount();
+  }
+
   if (document.querySelector(".services__splide")) {
-    var servicesSplide = new Splide(".splide.services__splide", {
+    var servicesSplide4 = new Splide(".splide.services__splide", {
       perPage: 4,
       perMove: 1,
       type: "slide",
@@ -200,7 +329,7 @@ document.addEventListener("DOMContentLoaded", function () {
         860: {
           perPage: 2,
           gap: "20px",
-          padding: {left: '20px', right: '20px'},
+          padding: { left: '20px', right: '20px' },
           type: 'loop'
         },
 
@@ -209,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
           gap: "20px",
           padding: 0,
           type: 'slide',
-          padding: {left: '20px', right: '20px'},
+          padding: { left: '20px', right: '20px' },
         },
       },
     }).mount();

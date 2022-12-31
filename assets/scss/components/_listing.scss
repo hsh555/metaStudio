@@ -1,5 +1,6 @@
 .listing {
   margin-bottom: 72px;
+
   .listing__header {
     display: flex;
     align-items: center;
@@ -43,6 +44,43 @@
 
     .form-label {
       margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and(max-width: 768px) {
+  .listing {
+    .listing__header {
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: initial;
+      margin-bottom: 0;
+    }
+    .listing__title {
+      width: 100%;
+      padding: 16px 12px;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      background-color: #242424;
+      border-radius: $border-radius-sm;
+      margin-bottom: 10px;
+
+      .icon {
+        margin-left: 3px;
+      }
+    }
+    .listing__actions {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 16px 12px;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      background-color: #242424;
+      border-radius: $border-radius-sm;
+      margin-bottom: 10px;
     }
   }
 }

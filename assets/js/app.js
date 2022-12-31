@@ -19,6 +19,34 @@
     }
   };
 
+  // categories scroll on drag
+  var categoriesInner = document.querySelector('.categories__inner');
+  var isDown = false;
+  var startX;
+  var scrollLeft;
+  
+  categoriesInner.addEventListener('mousedown', (e) => {
+    isDown = true;
+    categoriesInner.classList.add('active');
+    startX = e.pageX - categoriesInner.offsetLeft;
+    scrollLeft = categoriesInner.scrollLeft;
+  });
+  categoriesInner.addEventListener('mouseleave', () => {
+    isDown = false;
+    categoriesInner.classList.remove('active');
+  });
+  categoriesInner.addEventListener('mouseup', () => {
+    isDown = false;
+    categoriesInner.classList.remove('active');
+  });
+  categoriesInner.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    var x = e.pageX - categoriesInner.offsetLeft;
+    var walk = (x - startX); //scroll-fast
+    categoriesInner.scrollLeft = scrollLeft - walk;
+  });
+
   // custom-select
   if (document.getElementsByClassName("custom-select")) {
     var x, i, j, l, ll, selElmnt, a, b, c;

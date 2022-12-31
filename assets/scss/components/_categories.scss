@@ -1,8 +1,20 @@
 .categories {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
+
+  .categories__inner {
+    width: 100%;
+    overflow: hidden;
+    cursor: grab;
+  }
+
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+
   .categories__nav {
     display: flex;
     align-items: center;
+    min-width: 640px;
 
     .categories__nav__link {
       min-width: fit-content !important;
@@ -24,6 +36,27 @@
       &.active {
         background-color: $success;
         color: $dark;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 992px) {
+  .categories {
+    margin-bottom: 27px;
+    margin-top: 27px;
+
+    .categories__nav {
+      .categories__nav__link {
+        min-width: fit-content !important;
+        padding: 12px 21px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        margin-left: 12px;
+        &:last-of-type {
+          margin-left: 14px;
+        }
       }
     }
   }
