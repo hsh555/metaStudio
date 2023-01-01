@@ -55,7 +55,10 @@
       align-items: flex-start;
       background-color: initial;
       margin-bottom: 0;
+      padding-right: 0;
+      padding-left: 0;
     }
+
     .listing__title {
       width: 100%;
       padding: 16px 12px;
@@ -70,6 +73,7 @@
         margin-left: 3px;
       }
     }
+
     .listing__actions {
       display: flex;
       justify-content: space-between;

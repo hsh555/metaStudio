@@ -3,8 +3,18 @@
 
   .categories__inner {
     width: 100%;
-    overflow: hidden;
+    overflow-x: auto;
     cursor: grab;
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
   }
 
   -ms-overflow-style: none;

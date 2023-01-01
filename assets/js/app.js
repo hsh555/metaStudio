@@ -1,51 +1,105 @@
 (function () {
   // mobile-menu
   var mobileMenuToggler = document.getElementById("menu-toggler");
-  var mobileMenu = document.getElementById("mobile-menu");
-  mobileMenuToggler.onclick = function () {
-    mobileMenu.style.display = "block";
+  if (mobileMenuToggler) {
+    var mobileMenu = document.getElementById("mobile-menu");
+    mobileMenuToggler.onclick = function () {
+      mobileMenu.style.display = "block";
 
-    setTimeout(function () {
-      mobileMenu.classList.add("show");
-    }, 0);
-  };
-
-  mobileMenu.onclick = function (e) {
-    if (e.target.closest(".mobile-menu__nav") == null) {
-      mobileMenu.classList.remove("show");
       setTimeout(function () {
-        mobileMenu.style.display = "none";
-      }, 300);
-    }
-  };
+        mobileMenu.classList.add("show");
+      }, 0);
+    };
+
+    mobileMenu.onclick = function (e) {
+      if (e.target.closest(".mobile-menu__nav") == null) {
+        mobileMenu.classList.remove("show");
+        setTimeout(function () {
+          mobileMenu.style.display = "none";
+        }, 300);
+      }
+    };
+  }
 
   // categories scroll on drag
   var categoriesInner = document.querySelector('.categories__inner');
   var isDown = false;
   var startX;
   var scrollLeft;
-  
-  categoriesInner.addEventListener('mousedown', (e) => {
-    isDown = true;
-    categoriesInner.classList.add('active');
-    startX = e.pageX - categoriesInner.offsetLeft;
-    scrollLeft = categoriesInner.scrollLeft;
-  });
-  categoriesInner.addEventListener('mouseleave', () => {
-    isDown = false;
-    categoriesInner.classList.remove('active');
-  });
-  categoriesInner.addEventListener('mouseup', () => {
-    isDown = false;
-    categoriesInner.classList.remove('active');
-  });
-  categoriesInner.addEventListener('mousemove', (e) => {
-    if(!isDown) return;
-    e.preventDefault();
-    var x = e.pageX - categoriesInner.offsetLeft;
-    var walk = (x - startX); //scroll-fast
-    categoriesInner.scrollLeft = scrollLeft - walk;
-  });
+
+  if (categoriesInner) {
+    categoriesInner.addEventListener('mousedown', (e) => {
+      isDown = true;
+      categoriesInner.classList.add('active');
+      startX = e.pageX - categoriesInner.offsetLeft;
+      scrollLeft = categoriesInner.scrollLeft;
+    });
+    categoriesInner.addEventListener('mouseleave', () => {
+      isDown = false;
+      categoriesInner.classList.remove('active');
+    });
+    categoriesInner.addEventListener('mouseup', () => {
+      isDown = false;
+      categoriesInner.classList.remove('active');
+    });
+    categoriesInner.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      var x = e.pageX - categoriesInner.offsetLeft;
+      var walk = (x - startX); //scroll-fast
+      categoriesInner.scrollLeft = scrollLeft - walk;
+    });
+  }
+
+
+
+  // categoriesInner.addEventListener('touchstart', (e) => {
+  //   isDown = true;
+  //   categoriesInner.classList.add('active');
+  //   startX = e.pageX - categoriesInner.offsetLeft;
+  //   scrollLeft = categoriesInner.scrollLeft;
+  // });
+  // categoriesInner.addEventListener('touchend', () => {
+  //   isDown = false;
+  //   categoriesInner.classList.remove('active');
+  // });
+  // categoriesInner.addEventListener('touchend', () => {
+  //   isDown = false;
+  //   categoriesInner.classList.remove('active');
+  // });
+  // categoriesInner.addEventListener('touchmove', (e) => {
+  //   if(!isDown) return;
+  //   e.preventDefault();
+  //   var x = e.pageX - categoriesInner.offsetLeft;
+  //   var walk = (x - startX); //scroll-fast
+  //   categoriesInner.scrollLeft = scrollLeft - walk;
+  // });
+
+
+
+
+  // categoriesInner.addEventListener('touchstart', (e) => {
+  //   isDown = true;
+  //   categoriesInner.classList.add('active');
+  //   startX = e.pageX - categoriesInner.offsetLeft;
+  //   scrollLeft = categoriesInner.scrollLeft;
+  // });
+  // categoriesInner.addEventListener('touchend', () => {
+  //   isDown = false;
+  //   categoriesInner.classList.remove('active');
+  // });
+
+  // categoriesInner.addEventListener('touchend', () => {
+  //   isDown = false;
+  //   categoriesInner.classList.remove('active');
+  // });
+  // categoriesInner.addEventListener('touchmove', (e) => {
+  //   if(!isDown) return;
+  //   e.preventDefault();
+  //   var x = e.pageX - categoriesInner.offsetLeft;
+  //   var walk = (x - startX); //scroll-fast
+  //   categoriesInner.scrollLeft = scrollLeft - walk;
+  // });
 
   // custom-select
   if (document.getElementsByClassName("custom-select")) {
